@@ -73,9 +73,13 @@ class Main
 
             switch( tests) {
                 case Normal:
-                    StreamTest.Run(server);
+                    #if sys
+					StreamTest.Run(server);
+					#end
                 case Multiplex:
+					#if ! (flash || html5 || js)
                     MultiplexTest.Run(server);
+					#end
                 default:
                     throw "Unhandled test mode $tests";
             }
