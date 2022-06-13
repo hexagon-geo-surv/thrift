@@ -35,7 +35,7 @@ $(stress_test_gen): $(top_srcdir)/test/StressTest.thrift
 thrift_test_gen = $(addprefix gen-d/thrift/test/, SecondService.d \
 	ThriftTest.d ThriftTest_constants.d ThriftTest_types.d)
 
-$(thrift_test_gen): $(top_srcdir)/test/ThriftTest.thrift
+$(thrift_test_gen): $(top_srcdir)/test/ThriftTest_0_16.thrift
 	$(THRIFT) --gen d $<
 
 

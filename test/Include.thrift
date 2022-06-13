@@ -17,7 +17,7 @@
  * under the License.
  */
 
-include "ThriftTest.thrift"
+include "ThriftTest_0_16.thrift"
 
 struct IncludeTest {
   1: required ThriftTest.Bools bools

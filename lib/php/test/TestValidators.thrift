@@ -19,7 +19,7 @@
 
 namespace php TestValidators
 
-include "../../../test/ThriftTest.thrift"
+include "../../../test/ThriftTest_0_16.thrift"
 
 union UnionOfStrings {
   1: string aa;

@@ -152,6 +152,7 @@ EXTRA_DIST = \
 	SmallTest.thrift \
 	StressTest.thrift \
 	ThriftTest.thrift \
+	ThriftTest_0_16.thrift \
 	TypedefTest.thrift \
 	Types.thrift \
 	UnsafeTypes.thrift \

@@ -19,8 +19,8 @@
 
 TRIAL ?= trial
 
-stubs: ../ThriftTest.thrift ../SmallTest.thrift
-	$(THRIFT) --gen py:twisted ../ThriftTest.thrift
+stubs: ../ThriftTest_0_16.thrift ../SmallTest.thrift
+	$(THRIFT) --gen py:twisted ../ThriftTest_0_16.thrift
 	$(THRIFT) --gen py:twisted ../SmallTest.thrift
 
 check: stubs

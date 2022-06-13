@@ -17,8 +17,8 @@
 # under the License.
 #
 
-stubs: ../ThriftTest.thrift
-	$(THRIFT) --gen perl ../ThriftTest.thrift
+stubs: ../ThriftTest_0_16.thrift
+	$(THRIFT) --gen perl ../ThriftTest_0_16.thrift
 
 precross: stubs
 

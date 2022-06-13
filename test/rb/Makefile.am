@@ -17,8 +17,8 @@
 # under the License.
 #
 
-stubs: $(THRIFT) ../ThriftTest.thrift ../SmallTest.thrift
-	$(THRIFT) --gen rb ../ThriftTest.thrift
+stubs: $(THRIFT) ../ThriftTest_0_16.thrift ../SmallTest.thrift
+	$(THRIFT) --gen rb ../ThriftTest_0_16.thrift
 	$(THRIFT) --gen rb ../SmallTest.thrift
 	$(THRIFT) --gen rb ../Recursive.thrift
 

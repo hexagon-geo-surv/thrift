@@ -26,19 +26,19 @@ GOINSTALLEXTRA =
 endif
 
 THRIFTCMD = $(THRIFT) -out src/gen --gen go:thrift_import=github.com/apache/thrift/lib/go/thrift,package_prefix=github.com/apache/thrift/test/go/src/gen/$(COMPILER_EXTRAFLAG)
-THRIFTTEST = $(top_srcdir)/test/ThriftTest.thrift
+THRIFTTEST = $(top_srcdir)/test/ThriftTest_0_16.thrift
 
 precross: bin/testclient bin/testserver
 
-ThriftTest.thrift: $(THRIFTTEST)
-	grep -v list.*map.*list.*map $(THRIFTTEST) > ThriftTest.thrift
+ThriftTest_0_16.thrift: $(THRIFTTEST)
+	grep -v list.*map.*list.*map $(THRIFTTEST) > ThriftTest_0_16.thrift
 
 .PHONY: gopath
 
 # Thrift for GO has problems with complex map keys: THRIFT-2063
-gopath: $(THRIFT) ThriftTest.thrift
+gopath: $(THRIFT) ThriftTest_0_16.thrift
 	mkdir -p src/gen
-	$(THRIFTCMD) ThriftTest.thrift
+	$(THRIFTCMD) ThriftTest_0_16.thrift
 	$(THRIFTCMD) ../StressTest.thrift
 	touch gopath
 
@@ -52,7 +52,7 @@ bin/stress: gopath
 	GOPATH=`pwd` $(GO) install $(GOINSTALLEXTRA) -mod=mod ./src/bin/stress
 
 clean-local:
-	$(RM) -r src/gen src/github.com/golang src/thrift bin pkg gopath ThriftTest.thrift
+	$(RM) -r src/gen src/github.com/golang src/thrift bin pkg gopath ThriftTest_0_16.thrift
 
 check_PROGRAMS: bin/testclient bin/testserver bin/stress
 

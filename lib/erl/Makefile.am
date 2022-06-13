@@ -24,7 +24,7 @@ THRIFT_FILES = $(wildcard test/*.thrift) \
 		  ../../test/ConstantsDemo.thrift \
 		  ../../test/NameConflictTest.thrift \
 		  ../../test/DoubleConstantsTest.thrift \
-		  ../../test/ThriftTest.thrift
+		  ../../test/ThriftTest_0_16.thrift
 
 ERL_FLAG = erl
 ERL_FLAG_LEGACY = erl:legacynames

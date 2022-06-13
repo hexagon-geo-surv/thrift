@@ -17,7 +17,7 @@
 # under the License.
 #
 
-include "ThriftTest.thrift"
+include "ThriftTest_0_16.thrift"
 include "NamespacedTest.thrift"
 
 const ThriftTest.UserId USERID = 42

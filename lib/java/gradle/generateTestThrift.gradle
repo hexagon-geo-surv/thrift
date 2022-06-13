@@ -76,7 +76,7 @@ task generateJava(group: 'Build') {
 
     ext.outputBuffer = new ByteArrayOutputStream()
 
-    thriftCompile(it, 'ThriftTest.thrift')
+    thriftCompile(it, 'ThriftTest_0_16.thrift')
     thriftCompile(it, 'JavaTypes.thrift')
     thriftCompile(it, 'DebugProtoTest.thrift')
     thriftCompile(it, 'DoubleConstantsTest.thrift')

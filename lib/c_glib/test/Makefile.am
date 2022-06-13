@@ -332,10 +332,10 @@ gen-c_glib/t_test_enum_test_types.c gen-c_glib/t_test_enum_test_types.h gen-c_gl
 gen-c_glib/t_test_optional_required_test_types.c gen-c_glib/t_test_optional_required_test_types.h: ../../../test/OptionalRequiredTest.thrift $(THRIFT)
 	$(THRIFT) --gen c_glib $<
 
-gen-c_glib/t_test_second_service.c gen-c_glib/t_test_thrift_test.c gen-c_glib/t_test_thrift_test_types.c gen-c_glib/t_test_second_service.h gen-c_glib/t_test_thrift_test.h gen-c_glib/t_test_thrift_test_types.h: ../../../test/ThriftTest.thrift $(THRIFT)
+gen-c_glib/t_test_second_service.c gen-c_glib/t_test_thrift_test.c gen-c_glib/t_test_thrift_test_types.c gen-c_glib/t_test_second_service.h gen-c_glib/t_test_thrift_test.h gen-c_glib/t_test_thrift_test_types.h: ../../../test/ThriftTest_0_16.thrift $(THRIFT)
 	$(THRIFT) --gen c_glib $<
 
-gen-cpp/ThriftTest.cpp gen-cpp/ThriftTest_constants.cpp gen-cpp/ThriftTest_types.cpp: ../../../test/ThriftTest.thrift $(THRIFT)
+gen-cpp/ThriftTest.cpp gen-cpp/ThriftTest_constants.cpp gen-cpp/ThriftTest_types.cpp: ../../../test/ThriftTest_0_16.thrift $(THRIFT)
 	$(THRIFT) --gen cpp $<
 
 TESTS = \

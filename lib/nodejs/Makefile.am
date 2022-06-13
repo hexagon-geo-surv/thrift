@@ -17,8 +17,8 @@
 
 # We call npm twice to work around npm issues
 
-stubs: $(top_srcdir)/test/ThriftTest.thrift
-	$(THRIFT) --gen js:node -o test/ $(top_srcdir)/test/ThriftTest.thrift
+stubs: $(top_srcdir)/test/ThriftTest_0_16.thrift
+	$(THRIFT) --gen js:node -o test/ $(top_srcdir)/test/ThriftTest_0_16.thrift
 
 deps: $(top_srcdir)/package.json
 	$(NPM) install $(top_srcdir)/ || $(NPM) install $(top_srcdir)/

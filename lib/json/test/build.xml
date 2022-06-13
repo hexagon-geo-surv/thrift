@@ -70,7 +70,7 @@
     <exec executable="${thrift.compiler}" failonerror="true">
       <arg line="--gen json"/>
       <arg line="-out ${gen.json.dir}"/>
-      <arg line="${thrift.test.dir}/ThriftTest.thrift"/>
+      <arg line="${thrift.test.dir}/ThriftTest_0_16.thrift"/>
     </exec>
     <exec executable="${thrift.compiler}" failonerror="true">
       <arg line="--gen json:merge"/>

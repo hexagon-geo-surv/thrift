@@ -21,7 +21,7 @@ import copy
 
 
 def domain_socket_path(port):
-    return '/tmp/ThriftTest.thrift.%d' % port
+    return '/tmp/ThriftTest_0_16.thrift.%d' % port
 
 
 def merge_dict(base, update):

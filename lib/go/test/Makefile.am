@@ -26,7 +26,7 @@ endif
 THRIFT_GO_ARGS_BASE = thrift_import=github.com/apache/thrift/lib/go/thrift,package_prefix=github.com/apache/thrift/lib/go/test/gopath/src/
 
 THRIFTARGS = -out gopath/src/ --gen go:$(THRIFT_GO_ARGS_BASE)$(COMPILER_EXTRAFLAG)
-THRIFTTEST = $(top_srcdir)/test/ThriftTest.thrift
+THRIFTTEST = $(top_srcdir)/test/ThriftTest_0_16.thrift
 
 THRIFTARGS_SKIP_REMOTE = -out gopath/src/ --gen go:skip_remote,$(THRIFT_GO_ARGS_BASE)$(COMPILER_EXTRAFLAG)
 
@@ -65,7 +65,7 @@ gopath: $(THRIFT) $(THRIFTTEST) \
 				ConstOptionalField.thrift \
 				ProcessorMiddlewareTest.thrift
 	mkdir -p gopath/src
-	grep -v list.*map.*list.*map $(THRIFTTEST) | grep -v 'set<Insanity>' > ThriftTest.thrift
+	grep -v list.*map.*list.*map $(THRIFTTEST) | grep -v 'set<Insanity>' > ThriftTest_0_16.thrift
 	$(THRIFT) $(THRIFTARGS) -r IncludesTest.thrift
 	$(THRIFT) $(THRIFTARGS) BinaryKeyTest.thrift
 	$(THRIFT) $(THRIFTARGS) MultiplexedProtocolTest.thrift
@@ -124,7 +124,7 @@ check: gopath
 	$(GO) test -mod=mod ./gopath/src/tests ./gopath/src/dontexportrwtest
 
 clean-local:
-	$(RM) -r gopath ThriftTest.thrift gen-go
+	$(RM) -r gopath ThriftTest_0_16.thrift gen-go
 
 client: stubs
 	$(GO) run -mod=mod TestClient.go

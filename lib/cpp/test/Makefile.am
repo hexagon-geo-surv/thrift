@@ -408,7 +408,7 @@ gen-cpp/Recursive_types.cpp gen-cpp/Recursive_types.h: $(top_srcdir)/test/Recurs
 gen-cpp/Service.cpp gen-cpp/StressTest_types.cpp: $(top_srcdir)/test/StressTest.thrift
 	$(THRIFT) --gen cpp $<
 
-gen-cpp/SecondService.cpp gen-cpp/ThriftTest_constants.cpp gen-cpp/ThriftTest.cpp gen-cpp/ThriftTest_types.cpp gen-cpp/ThriftTest_types.h: $(top_srcdir)/test/ThriftTest.thrift
+gen-cpp/SecondService.cpp gen-cpp/ThriftTest_constants.cpp gen-cpp/ThriftTest.cpp gen-cpp/ThriftTest_types.cpp gen-cpp/ThriftTest_types.h: $(top_srcdir)/test/ThriftTest_0_16.thrift
 	$(THRIFT) --gen cpp $<
 
 gen-cpp/OneWayService.cpp gen-cpp/OneWayTest_types.h gen-cpp/OneWayService.h: OneWayTest.thrift
